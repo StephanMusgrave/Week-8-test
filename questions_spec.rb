@@ -33,12 +33,12 @@ describe 'the Friday test :)' do
     expect(n).to eq ['god', 'yeknom', 'tnahpele']
   end
 
-  # specify 'every_possible_pairing_of_students' do
-  #   n = every_possible_pairing_of_students(['Bob', 'Dave', 'Clive']) || []
-  #   sorted = n.map {|pair| pair.sort}.sort_by {|pair| [pair.first, pair.last] }
+  specify 'every_possible_pairing_of_students' do
+    n = every_possible_pairing_of_students(['Bob', 'Dave', 'Clive']) || []
+    sorted = n.map {|pair| pair.sort}.sort_by {|pair| [pair.first, pair.last] }
 
-  #   expect(sorted).to eq [['Bob', 'Clive'], ['Bob', 'Dave'], ['Clive', 'Dave']]
-  # end
+    expect(sorted).to eq [['Bob', 'Clive'], ['Bob', 'Dave'], ['Clive', 'Dave']]
+  end
 
   specify 'all_elements_except_first_3' do
     n = all_elements_except_first_3 [1, 2, 3, 4, 5, 6, 7]
@@ -101,15 +101,15 @@ describe 'the Friday test :)' do
     expect(n).to eq [1, 2, 3, 1, 2, 3]
   end
 
-#   specify 'turn_symbol_into_string' do
-#     n = turn_symbol_into_string :foobar
-#     expect(n).to eq 'foobar'
-#   end
+  specify 'turn_symbol_into_string' do
+    n = turn_symbol_into_string :foobar
+    expect(n).to eq 'foobar'
+  end
 
-#   specify 'average_of_array' do
-#     n = average_of_array [10, 15, 25]
-#     expect(n).to eq 17
-#   end
+  specify 'average_of_array' do
+    n = average_of_array [10, 15, 25]
+    expect(n).to eq 17
+  end
 
 #   specify 'get_elements_until_greater_than_five' do
 #     n = get_elements_until_greater_than_five [1, 3, 5, 4, 1, 2, 6, 2, 1, 3, 7]

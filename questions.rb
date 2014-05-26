@@ -29,7 +29,7 @@ end
 # [['Bob', 'Clive'], ['Bob', 'Dave'], ['Clive', 'Dave']]
 # make sure you don't have the same pairing twice, 
 def every_possible_pairing_of_students(array)
-
+      array.combination(2).to_a.sort
 end
 
 # discard the first 3 elements of an array, 
@@ -113,11 +113,13 @@ end
 
 # convert a symbol into a string
 def turn_symbol_into_string(symbol)
+  symbol.to_s
 end
 
 # get the average from an array, rounded to the nearest integer
 # so [10, 15, 25] should return 17
 def average_of_array(array)
+  ((array.inject{|sum,x| sum + x })/array.count.to_f).round
 end
 
 # get all the elements in an array, up until the first element
